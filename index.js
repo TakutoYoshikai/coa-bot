@@ -27,6 +27,9 @@ client.on("message", function(message) {
   if (message.content.indexOf("成沢") != -1) {
     message.reply("先生が課題出せって言ってたよ");
   }
+  if (message.content.indexOf("これ作った") != -1 || message.content.indexOf("作りました") != -1) {
+    message.reply("すごーい！！！天才！！！");
+  }
 });
 
 client.login(config.token);
