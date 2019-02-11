@@ -28,7 +28,9 @@ client.on("message", function(message) {
     message.reply("先生が課題出せって言ってたよ");
   }
   if (message.content.indexOf("これ作った") != -1 || message.content.indexOf("作りました") != -1) {
-    message.reply("すごーい！！！天才！！！");
+    setTimeout(function() {
+      message.reply("すごーい！！！天才！！！");
+    }, 5000);
   }
 });
 
