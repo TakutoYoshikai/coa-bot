@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "cron": "^1.6.0",
+    "discord.js": "^11.4.2",
+    "twitter": "^1.7.1"
   }
 }

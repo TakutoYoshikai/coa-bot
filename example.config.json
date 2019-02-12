@@ -1,3 +1,9 @@
 {
-  "token": "トークンをセットしてね。トークンは吉開からもらってね"
+  "token": "トークンをセットしてね。トークンは吉開からもらってね",
+  "twitter": {
+    "consumer_key": "AAA",
+    "consumer_secret": "BBB",
+    "access_token_key": "CCC",
+    "access_token_secret": "DDD"
+  }
 }

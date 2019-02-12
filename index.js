@@ -1,10 +1,14 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
+const CronJob = require("cron").CronJob;
+const TweetSearcher = require("./coa-feature/get-tweet");
 var config = loadConfig();
+const tweetSearcher = new TweetSearcher(config);
 var channels = {
   general: "523320444162408450",
-  test: "544402388753186818"
+  test: "544402388753186818",
+  reputation: "544813990665256980"
 }
 
 function loadConfig() {
@@ -34,4 +38,17 @@ client.on("message", function(message) {
   }
 });
 
+var searchTweetJob = new CronJob( {
+  cronTime: "0 0 * * * *",
+  onTick: function() {
+    tweetSearcher.searchNewTweets("コードアカデミー", function(tweetTexts) {
+      tweetTexts.forEach(function(text) {
+        client.channels.get(channels.reputation).send(text);
+      });
+    });
+  }, 
+  start: false
+});
 client.login(config.token);
+searchTweetJob.start();
+
