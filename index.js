@@ -32,6 +32,12 @@ client.on("message", function(message) {
       message.reply("すごーい！！！天才！！！");
     }, 5000);
   }
+  if (message.content == "ojisan") {
+    setTimeout(function() {
+      message.reply("ありがとう！！今日のお小遣いもよろしくね！！！");
+    }, 5000);
+    
+  }
 });
 
 client.login(config.token);
