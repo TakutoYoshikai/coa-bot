@@ -32,6 +32,9 @@ client.on("message", function(message) {
       message.reply("すごーい！！！天才！！！");
     }, 5000);
   }
+  if (message.content.toLowerCase().indexOf("javascript") != -1) {
+    message.reply("あーJavaね");
+  }
   if (message.content == "ojisan") {
     setTimeout(function() {
       message.reply("ありがとう！！今日のお小遣いもよろしくね！！！");
