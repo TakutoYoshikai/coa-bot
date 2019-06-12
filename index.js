@@ -48,12 +48,6 @@ client.on("message", function(message) {
   if (message.content.toLowerCase().indexOf("javascript") != -1) {
     message.reply("あーJavaね");
   }
-  if (message.content == "ojisan") {
-    setTimeout(function() {
-      message.reply("ありがとう！！今日のお小遣いもよろしくね！！！");
-    }, 5000);
-    
-  }
   if (message.content == "何してるの") {
     message.reply(randomTalk());
   }
